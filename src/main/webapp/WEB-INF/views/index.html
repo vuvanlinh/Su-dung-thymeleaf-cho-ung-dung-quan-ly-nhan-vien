@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+
+<div align="center">
+    <h3>Quan ly nhan vien</h3>
+    <p>
+        <a th:href="@{/nhanvien/create}">
+            Them nhan vien moi
+        </a>
+    </p>
+    <table id="cacnhanvien" border="1">
+        <thead>
+        <tr>
+            <th>Ma nhan vien</th>
+            <th>Nhom nhan vien</th>
+            <th>Ten nhan vien</th>
+            <th>Gioi tinh</th>
+            <th>So dien thoai</th>
+            <th>Chinh sua</th>
+            <th>Xoa</th>
+            <th>Xem</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="row,rowStat : ${tatcaNhanvien}">
+            <td th:text="${row.getId()}"></td>
+            <td th:text="${row.getNhomNhanVien()}"></td>
+            <td th:text="${row.getHoTen()}"></td>
+            <td th:text="${row.getGioiTinh()}"></td>
+            <td th:text="${row.getSoDienThoai()}"></td>
+            <td><a th:href="@{/nhanvien/{id}/Chinhsua(id=${row.getId()})}">Chinh sua</a></td>
+            <td><a th:href="@{/nhanvien/{id}/Xoa(id=${row.getId()})}">Xoa</a></td>
+            <td><a th:href="@{/nhanvien/{id}/Xem(id=${row.getId()})}">Xem</a></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+</body>
+</html>
