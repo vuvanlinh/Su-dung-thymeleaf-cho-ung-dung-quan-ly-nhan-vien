@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+<h3>Chinh sua thong tin</h3>
+<p>
+    <a th:href="@{/}">
+        Quay tro lai danh sach
+    </a>
+</p>
+<div id="form">
+    <form action="#" th:action="@{/nhanvien/capnhat}" th:object="${nhanvien}"
+          method="POST" novalidate="novalidate">
+        <input type="hidden" th:field="*{id}"/>
+        <div>
+            <label>Nhom nhan vien</label>
+            <input type="text" th:field="*{nhomNhanVien}"/>
+        </div>
+        <div>
+            <label>Ten</label>
+            <input type="text" th:field="*{hoTen}"/>
+        </div>
+        <div>
+            <label>Gioi tinh</label>
+            <input type="text" th:field="*{gioiTinh}"/>
+        </div>
+        <div>
+            <label>So dien thoai</label>
+            <input type="text" th:field="*{soDienThoai}"/>
+        </div>
+        <input type="submit" value="Chinh sua"></input>
+    </form>
+</div>
+</body>
+</html>

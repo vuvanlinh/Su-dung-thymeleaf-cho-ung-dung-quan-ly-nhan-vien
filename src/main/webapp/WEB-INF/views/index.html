@@ -3,9 +3,14 @@
 <body>
 
 <div align="center">
+    <div class="notify">
+        <div th:if="${thanhcong}">
+            <span th:text="${thanhcong}"></span>
+        </div>
+    </div><br><br>
     <h3>Quan ly nhan vien</h3>
     <p>
-        <a th:href="@{/nhanvien/create}">
+        <a th:href="@{/nhanvien/taonhanvienmoi}">
             Them nhan vien moi
         </a>
     </p>

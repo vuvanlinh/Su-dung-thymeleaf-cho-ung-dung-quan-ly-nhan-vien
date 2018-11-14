@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+<h3>Xem nhan vien</h3>
+<p>
+    <a th:href="@{/}">
+        Quay tro lai danh sach
+    </a>
+</p>
+<div id="detail">
+    <div class="cusdetail">
+        <label>Nhom nhan vien:</label>
+        <label th:text="${nhanvien.getNhomNhanVien()}"></label>
+    </div>
+    <div class="cusdetail">
+        <label>Ten:</label>
+        <label th:text="${nhanvien.getHoTen()}"></label>
+    </div>
+    <div class="cusdetail">
+        <label>Gioi tinh:</label>
+        <label th:text="${nhanvien.getGioiTinh()}"></label>
+    </div>
+    <div class="cusdetail">
+        <label>So dien thoai:</label>
+        <label th:text="${nhanvien.getSoDienThoai()}"></label>
+    </div>
+</div>
+</body>
+</html>
